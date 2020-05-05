@@ -32,4 +32,16 @@ Make sure you're connected to ethernet and have the the non-free repository for 
 ```
 sudo apt-get install thunderbird
 ```
-
+4. Install Snap
+```
+sudo apt update
+sudo apt install snapd
+```
+5. Install Visual Code
+```
+sudo snap install code --classic
+```
+6. Install PyCharm
+```
+sudo snap install pycharm-community --classic
+```
