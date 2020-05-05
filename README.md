@@ -27,5 +27,9 @@ Make sure you're connected to ethernet and have the the non-free repository for 
     - Start becoming superuser with su. Enter your root password.
     - Now, install sudo with `apt-get install sudo`.
     - Add the user account to the group sudo with `/sbin/adduser username sudo`. Where username is your user account.
-
+    
+3. Install Thunderbird Email Client in Linux
+```
+sudo apt-get install thunderbird
+```
 
