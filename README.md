@@ -16,4 +16,6 @@ Also, replace /path/to/debian-10.3.0-amd64-netinst.iso with the path to the ISO 
 ```
 sudo dd bs=4M if=/path/to/debian-10.3.0-amd64-netinst.iso of=/dev/sdx status=progress oflag=sync
 ```
+## After installation
+1. Install Broadcom 43xx wireless drivers, as per https://wiki.debian.org/bcm43xx
 
