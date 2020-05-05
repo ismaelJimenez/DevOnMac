@@ -23,3 +23,9 @@ sudo apt-get install linux-headers-$(uname -r) && sudo apt-get install broadcom-
 ```
 Make sure you're connected to ethernet and have the the non-free repository for the STA driver before attempting to install (See SourcesList). 
 
+2. Install SUDO
+    - Start becoming superuser with su. Enter your root password.
+    - Now, install sudo with `apt-get install sudo`.
+    - Add the user account to the group sudo with `/sbin/adduser username sudo`. Where username is your user account.
+
+
