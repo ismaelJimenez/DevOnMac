@@ -5,6 +5,7 @@
 ```
 sha256sum debian-mac-10.X.Y-amd64-netinst.iso
 ```
+3. asd
 
 
 
