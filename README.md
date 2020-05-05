@@ -17,5 +17,9 @@ Also, replace /path/to/debian-10.3.0-amd64-netinst.iso with the path to the ISO 
 sudo dd bs=4M if=/path/to/debian-10.3.0-amd64-netinst.iso of=/dev/sdx status=progress oflag=sync
 ```
 ## After installation
-1. Install Broadcom 43xx wireless drivers, as per https://wiki.debian.org/bcm43xx
+1. Install Broadcom 43xx wireless drivers, as per https://wiki.debian.org/InstallingDebianOn/Apple/MacBookPro/9-2
+```
+sudo apt-get install linux-headers-$(uname -r) && sudo apt-get install broadcom-sta-common broadcom-sta-source broadcom-sta-dkms
+```
+Make sure you're connected to ethernet and have the the non-free repository for the STA driver before attempting to install (See SourcesList). 
 
