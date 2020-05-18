@@ -17,16 +17,35 @@ Also, replace /path/to/debian-10.3.0-amd64-netinst.iso with the path to the ISO 
 sudo dd bs=4M if=/path/to/debian-10.3.0-amd64-netinst.iso of=/dev/sdx status=progress oflag=sync
 ```
 ## After installation
-1. Install Broadcom 43xx wireless drivers, as per https://wiki.debian.org/InstallingDebianOn/Apple/MacBookPro/9-2
+1. Install SUDO
+    - Start becoming superuser with su. Enter your root password.
+    - Now, install sudo with `apt-get install sudo`.
+    - Add the user account to the group sudo with `/sbin/adduser username sudo`. Where username is your user account.
+2. Add a "contrib" component to your existing repository line in /etc/apt/sources.list; for example:
+```
+# Debian 10 "stretch"
+deb http://deb.debian.org/debian/ buster main contrib non-free
+```
+
+update the list of available packages:
+```
+
+apt-get update
+```
+
+Install the appropriate firmware installer package:
+
+```
+
+apt-get install firmware-b43-installer
+```
+
+3. Install Broadcom 43xx wireless drivers, as per https://wiki.debian.org/InstallingDebianOn/Apple/MacBookPro/9-2
 ```
 sudo apt-get install linux-headers-$(uname -r) && sudo apt-get install broadcom-sta-common broadcom-sta-source broadcom-sta-dkms
 ```
 Make sure you're connected to ethernet and have the the non-free repository for the STA driver before attempting to install (See SourcesList). 
 
-2. Install SUDO
-    - Start becoming superuser with su. Enter your root password.
-    - Now, install sudo with `apt-get install sudo`.
-    - Add the user account to the group sudo with `/sbin/adduser username sudo`. Where username is your user account.
     
 3. Install Thunderbird Email Client in Linux
 ```
