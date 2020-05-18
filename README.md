@@ -47,9 +47,9 @@ sudo apt-get install linux-headers-$(uname -r) && sudo apt-get install broadcom-
 Make sure you're connected to ethernet and have the the non-free repository for the STA driver before attempting to install (See SourcesList). 
 
     
-3. Install Thunderbird Email Client in Linux
+3. Install Git and Thunderbird Email Client in Linux
 ```
-sudo apt-get install thunderbird
+sudo apt-get install thunderbird git
 ```
 4. Install Snap
 ```
